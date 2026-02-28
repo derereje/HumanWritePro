@@ -1,0 +1,674 @@
+Subscriptions
+Get Subscription
+
+Copy page
+
+Get a subscription by ID.
+
+Scopes: subscriptions:read subscriptions:write
+
+GET
+
+https://api.polar.sh
+/
+v1
+/
+subscriptions
+/
+{id}
+
+Try it
+Authorizations
+​
+Authorization
+stringheaderrequired
+You can generate an Organization Access Token from your organization's settings.
+
+Path Parameters
+​
+id
+string<uuid4>required
+The subscription ID.
+
+Response
+
+200
+
+application/json
+Successful Response
+
+​
+created_at
+string<date-time>required
+Creation timestamp of the object.
+
+​
+modified_at
+string<date-time> | nullrequired
+Last modification timestamp of the object.
+
+​
+id
+string<uuid4>required
+The ID of the object.
+
+​
+amount
+integerrequired
+The amount of the subscription.
+
+Examples:
+10000
+​
+currency
+stringrequired
+The currency of the subscription.
+
+Examples:
+"usd"
+​
+recurring_interval
+enum<string>required
+The interval at which the subscription recurs.
+
+Available options: day, week, month, year 
+​
+recurring_interval_count
+integerrequired
+Number of interval units of the subscription. If this is set to 1 the charge will happen every interval (e.g. every month), if set to 2 it will be every other month, and so on.
+
+​
+status
+enum<string>required
+The status of the subscription.
+
+Available options: incomplete, incomplete_expired, trialing, active, past_due, canceled, unpaid 
+​
+current_period_start
+string<date-time>required
+The start timestamp of the current billing period.
+
+​
+current_period_end
+string<date-time> | nullrequired
+The end timestamp of the current billing period.
+
+​
+trial_start
+string<date-time> | nullrequired
+The start timestamp of the trial period, if any.
+
+​
+trial_end
+string<date-time> | nullrequired
+The end timestamp of the trial period, if any.
+
+​
+cancel_at_period_end
+booleanrequired
+Whether the subscription will be canceled at the end of the current period.
+
+​
+canceled_at
+string<date-time> | nullrequired
+The timestamp when the subscription was canceled. The subscription might still be active if cancel_at_period_end is true.
+
+​
+started_at
+string<date-time> | nullrequired
+The timestamp when the subscription started.
+
+​
+ends_at
+string<date-time> | nullrequired
+The timestamp when the subscription will end.
+
+​
+ended_at
+string<date-time> | nullrequired
+The timestamp when the subscription ended.
+
+​
+customer_id
+string<uuid4>required
+The ID of the subscribed customer.
+
+​
+product_id
+string<uuid4>required
+The ID of the subscribed product.
+
+​
+discount_id
+string<uuid4> | nullrequired
+The ID of the applied discount, if any.
+
+​
+checkout_id
+string<uuid4> | nullrequired
+​
+customer_cancellation_reason
+enum<string> | nullrequired
+Available options: customer_service, low_quality, missing_features, switched_service, too_complex, too_expensive, unused, other 
+​
+customer_cancellation_comment
+string | nullrequired
+​
+metadata
+objectrequired
+Show child attributes
+
+​
+customer
+objectrequired
+Show child attributes
+
+​
+product
+objectrequired
+A product.
+
+Show child attributes
+
+​
+discount
+object | nullrequired
+DiscountFixedOnceForeverDurationBase
+DiscountFixedRepeatDurationBase
+DiscountPercentageOnceForeverDurationBase
+DiscountPercentageRepeatDurationBase
+Show child attributes
+
+​
+prices
+Prices · arrayrequired
+List of enabled prices for the subscription.
+
+LegacyRecurringProductPriceFixed
+LegacyRecurringProductPriceCustom
+LegacyRecurringProductPriceFree
+ProductPriceFixed
+ProductPriceCustom
+ProductPriceFree
+ProductPriceSeatBased
+ProductPriceMeteredUnit
+Show child attributes
+
+​
+meters
+SubscriptionMeter · object[]required
+List of meters associated with the subscription.
+
+Show child attributes
+
+​
+seats
+integer | null
+The number of seats for seat-based subscriptions. None for non-seat subscriptions.
+
+​
+custom_field_data
+object
+Key-value object storing custom field values.
+
+Show child attributes
+
+Subscriptions
+Update Subscription
+
+Copy page
+
+Update a subscription.
+
+Scopes: subscriptions:write
+
+PATCH
+
+https://api.polar.sh
+/
+v1
+/
+subscriptions
+/
+{id}
+
+Try it
+Authorizations
+​
+Authorization
+stringheaderrequired
+You can generate an Organization Access Token from your organization's settings.
+
+Path Parameters
+​
+id
+string<uuid4>required
+The subscription ID.
+
+Body
+application/json
+SubscriptionUpdateProduct
+SubscriptionUpdateDiscount
+SubscriptionUpdateTrial
+SubscriptionUpdateSeats
+SubscriptionCancel
+SubscriptionRevoke
+​
+product_id
+string<uuid4>required
+Update subscription to another product.
+
+Examples:
+"d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23"
+​
+proration_behavior
+enum<string> | null
+Determine how to handle the proration billing. If not provided, will use the default organization setting.
+
+Available options: invoice, prorate 
+Response
+
+200
+
+application/json
+Subscription updated.
+
+​
+created_at
+string<date-time>required
+Creation timestamp of the object.
+
+​
+modified_at
+string<date-time> | nullrequired
+Last modification timestamp of the object.
+
+​
+id
+string<uuid4>required
+The ID of the object.
+
+​
+amount
+integerrequired
+The amount of the subscription.
+
+Examples:
+10000
+​
+currency
+stringrequired
+The currency of the subscription.
+
+Examples:
+"usd"
+​
+recurring_interval
+enum<string>required
+The interval at which the subscription recurs.
+
+Available options: day, week, month, year 
+​
+recurring_interval_count
+integerrequired
+Number of interval units of the subscription. If this is set to 1 the charge will happen every interval (e.g. every month), if set to 2 it will be every other month, and so on.
+
+​
+status
+enum<string>required
+The status of the subscription.
+
+Available options: incomplete, incomplete_expired, trialing, active, past_due, canceled, unpaid 
+​
+current_period_start
+string<date-time>required
+The start timestamp of the current billing period.
+
+​
+current_period_end
+string<date-time> | nullrequired
+The end timestamp of the current billing period.
+
+​
+trial_start
+string<date-time> | nullrequired
+The start timestamp of the trial period, if any.
+
+​
+trial_end
+string<date-time> | nullrequired
+The end timestamp of the trial period, if any.
+
+​
+cancel_at_period_end
+booleanrequired
+Whether the subscription will be canceled at the end of the current period.
+
+​
+canceled_at
+string<date-time> | nullrequired
+The timestamp when the subscription was canceled. The subscription might still be active if cancel_at_period_end is true.
+
+​
+started_at
+string<date-time> | nullrequired
+The timestamp when the subscription started.
+
+​
+ends_at
+string<date-time> | nullrequired
+The timestamp when the subscription will end.
+
+​
+ended_at
+string<date-time> | nullrequired
+The timestamp when the subscription ended.
+
+​
+customer_id
+string<uuid4>required
+The ID of the subscribed customer.
+
+​
+product_id
+string<uuid4>required
+The ID of the subscribed product.
+
+​
+discount_id
+string<uuid4> | nullrequired
+The ID of the applied discount, if any.
+
+​
+checkout_id
+string<uuid4> | nullrequired
+​
+customer_cancellation_reason
+enum<string> | nullrequired
+Available options: customer_service, low_quality, missing_features, switched_service, too_complex, too_expensive, unused, other 
+​
+customer_cancellation_comment
+string | nullrequired
+​
+metadata
+objectrequired
+Show child attributes
+
+​
+customer
+objectrequired
+Show child attributes
+
+​
+product
+objectrequired
+A product.
+
+Show child attributes
+
+​
+discount
+object | nullrequired
+DiscountFixedOnceForeverDurationBase
+DiscountFixedRepeatDurationBase
+DiscountPercentageOnceForeverDurationBase
+DiscountPercentageRepeatDurationBase
+Show child attributes
+
+​
+prices
+Prices · arrayrequired
+List of enabled prices for the subscription.
+
+LegacyRecurringProductPriceFixed
+LegacyRecurringProductPriceCustom
+LegacyRecurringProductPriceFree
+ProductPriceFixed
+ProductPriceCustom
+ProductPriceFree
+ProductPriceSeatBased
+ProductPriceMeteredUnit
+Show child attributes
+
+​
+meters
+SubscriptionMeter · object[]required
+List of meters associated with the subscription.
+
+Show child attributes
+
+​
+seats
+integer | null
+The number of seats for seat-based subscriptions. None for non-seat subscriptions.
+
+​
+custom_field_data
+object
+Key-value object storing custom field values.
+
+Show child attributes
+
+Was this page helpful?
+
+
+Yes
+
+No
+
+
+
+Subscriptions
+Revoke Subscription
+
+Copy page
+
+Revoke a subscription, i.e cancel immediately.
+
+Scopes: subscriptions:write
+
+DELETE
+
+https://api.polar.sh
+/
+v1
+/
+subscriptions
+/
+{id}
+
+Try it
+Authorizations
+​
+Authorization
+stringheaderrequired
+You can generate an Organization Access Token from your organization's settings.
+
+Path Parameters
+​
+id
+string<uuid4>required
+The subscription ID.
+
+Response
+
+200
+
+application/json
+Subscription revoked.
+
+​
+created_at
+string<date-time>required
+Creation timestamp of the object.
+
+​
+modified_at
+string<date-time> | nullrequired
+Last modification timestamp of the object.
+
+​
+id
+string<uuid4>required
+The ID of the object.
+
+​
+amount
+integerrequired
+The amount of the subscription.
+
+Examples:
+10000
+​
+currency
+stringrequired
+The currency of the subscription.
+
+Examples:
+"usd"
+​
+recurring_interval
+enum<string>required
+The interval at which the subscription recurs.
+
+Available options: day, week, month, year 
+​
+recurring_interval_count
+integerrequired
+Number of interval units of the subscription. If this is set to 1 the charge will happen every interval (e.g. every month), if set to 2 it will be every other month, and so on.
+
+​
+status
+enum<string>required
+The status of the subscription.
+
+Available options: incomplete, incomplete_expired, trialing, active, past_due, canceled, unpaid 
+​
+current_period_start
+string<date-time>required
+The start timestamp of the current billing period.
+
+​
+current_period_end
+string<date-time> | nullrequired
+The end timestamp of the current billing period.
+
+​
+trial_start
+string<date-time> | nullrequired
+The start timestamp of the trial period, if any.
+
+​
+trial_end
+string<date-time> | nullrequired
+The end timestamp of the trial period, if any.
+
+​
+cancel_at_period_end
+booleanrequired
+Whether the subscription will be canceled at the end of the current period.
+
+​
+canceled_at
+string<date-time> | nullrequired
+The timestamp when the subscription was canceled. The subscription might still be active if cancel_at_period_end is true.
+
+​
+started_at
+string<date-time> | nullrequired
+The timestamp when the subscription started.
+
+​
+ends_at
+string<date-time> | nullrequired
+The timestamp when the subscription will end.
+
+​
+ended_at
+string<date-time> | nullrequired
+The timestamp when the subscription ended.
+
+​
+customer_id
+string<uuid4>required
+The ID of the subscribed customer.
+
+​
+product_id
+string<uuid4>required
+The ID of the subscribed product.
+
+​
+discount_id
+string<uuid4> | nullrequired
+The ID of the applied discount, if any.
+
+​
+checkout_id
+string<uuid4> | nullrequired
+​
+customer_cancellation_reason
+enum<string> | nullrequired
+Available options: customer_service, low_quality, missing_features, switched_service, too_complex, too_expensive, unused, other 
+​
+customer_cancellation_comment
+string | nullrequired
+​
+metadata
+objectrequired
+Show child attributes
+
+​
+customer
+objectrequired
+Show child attributes
+
+​
+product
+objectrequired
+A product.
+
+Show child attributes
+
+​
+discount
+object | nullrequired
+DiscountFixedOnceForeverDurationBase
+DiscountFixedRepeatDurationBase
+DiscountPercentageOnceForeverDurationBase
+DiscountPercentageRepeatDurationBase
+Show child attributes
+
+​
+prices
+Prices · arrayrequired
+List of enabled prices for the subscription.
+
+LegacyRecurringProductPriceFixed
+LegacyRecurringProductPriceCustom
+LegacyRecurringProductPriceFree
+ProductPriceFixed
+ProductPriceCustom
+ProductPriceFree
+ProductPriceSeatBased
+ProductPriceMeteredUnit
+Show child attributes
+
+​
+meters
+SubscriptionMeter · object[]required
+List of meters associated with the subscription.
+
+Show child attributes
+
+​
+seats
+integer | null
+The number of seats for seat-based subscriptions. None for non-seat subscriptions.
+
+​
+custom_field_data
+object
+Key-value object storing custom field values.
+
+Show child attributes

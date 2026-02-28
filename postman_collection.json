@@ -1,0 +1,188 @@
+{
+  "info": {
+    "name": "AI Text Humanizer API",
+    "description": "Collection for testing the AI Text Humanizer API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Humanize Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"This is an AI-generated text that needs to be humanized. The artificial intelligence system processes data efficiently and provides optimal results.\",\n  \"preset\": \"casual\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        },
+        "description": "Humanize AI-generated text using different presets"
+      },
+      "response": []
+    },
+    {
+      "name": "Humanize Text - Professional",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"The aforementioned system demonstrates optimal performance characteristics and provides comprehensive solutions.\",\n  \"preset\": \"professional\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Humanize Text - Minimal Errors",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"This document contains important information that requires careful review.\",\n  \"preset\": \"minimal-errors\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Humanize Text - Playful",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"The system is working perfectly and all functions are operational.\",\n  \"preset\": \"playful\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Humanizer History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        },
+        "description": "Retrieve user's humanization history"
+      },
+      "response": []
+    },
+    {
+      "name": "Test Error - No Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"preset\": \"casual\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        },
+        "description": "Test error handling for missing text"
+      },
+      "response": []
+    },
+    {
+      "name": "Test Error - Empty Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"\",\n  \"preset\": \"casual\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        },
+        "description": "Test error handling for empty text"
+      },
+      "response": []
+    },
+    {
+      "name": "Test Error - Text Too Long",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"" + "A".repeat(5000) + "\",\n  \"preset\": \"casual\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/humanizer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "humanizer"]
+        },
+        "description": "Test error handling for text that's too long"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3050",
+      "description": "Base URL for the API"
+    }
+  ]
+}

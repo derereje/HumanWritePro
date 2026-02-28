@@ -1,0 +1,28 @@
+# robots.txt for www.purifytext.com
+# Allow all web crawlers to access all content except sensitive areas
+
+User-agent: *
+Allow: /
+Allow: /pricing
+Allow: /faq
+Allow: /help-center
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+
+# Block API endpoints
+Disallow: /api/
+
+# Block authentication routes (handled by Clerk)
+Disallow: /auth/
+Disallow: /sign-in
+Disallow: /sign-up
+Disallow: /account
+Disallow: /api-keys
+
+# Block internal Next.js routes
+Disallow: /_next/
+Disallow: /static/
+
+# Sitemap location (canonical domain with www)
+Sitemap: https://www.purifytext.com/sitemap.xml
