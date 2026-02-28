@@ -1,9 +1,8 @@
 import { type Metadata } from "next";
+// Mock: currentUser and DB replaced to avoid Clerk/DB requirement in mock mode
 import PageNavbar from "~/components/PageNavbar";
 import PricingPageClient from "~/components/PricingPageClient";
 import { SiteFooter } from "~/components/SiteFooter";
-import { currentUser } from "@clerk/nextjs/server";
-import { db } from "~/server/db";
 
 export const metadata: Metadata = {
   title: "Pricing - HumanWritePro",
@@ -51,66 +50,10 @@ export const metadata: Metadata = {
 };
 
 export default async function PricingPage() {
-  const user = await currentUser();
-  let isTeamMember = false;
-  let hasSubscription = false;
-  let subscriptionPlan: string | null = null;
-
-  if (user) {
-    let dbUser = await db.user.findUnique({
-      where: { clerkId: user.id },
-      include: {
-        team: {
-          include: {
-            owner: true
-          }
-        }
-      }
-    });
-
-    // Fallback: If user not found in DB (webhook delay), create on the fly
-    if (!dbUser) {
-      console.log("⚠️ [Pricing Page] User not found in DB, creating on the fly...");
-      const email = user.emailAddresses[0]?.emailAddress || "";
-      const name = `${user.firstName || ""} ${user.lastName || ""}`.trim() || user.username || "User";
-
-      const newUser = await db.user.create({
-        data: {
-          clerkId: user.id,
-          email,
-          name,
-          image: user.imageUrl,
-          emailVerified: user.emailAddresses[0]?.verification?.status === 'verified',
-          // credits will default to 500 from schema
-        }
-      });
-
-      // Refetch with relations
-      dbUser = await db.user.findUnique({
-        where: { id: newUser.id },
-        include: {
-          team: {
-            include: {
-              owner: true
-            }
-          }
-        }
-      });
-    }
-
-    if (dbUser) {
-      // Check if user is in a team and NOT the owner
-      if (dbUser.team?.owner && dbUser.team.ownerId !== dbUser.id) {
-        isTeamMember = true;
-      }
-
-      // Check if user has an active subscription
-      if (dbUser.subscriptionPlan) {
-        hasSubscription = true;
-        subscriptionPlan = dbUser.subscriptionPlan;
-      }
-    }
-  }
+  // Mock: static values replacing Clerk + DB lookups
+  const isTeamMember = false;
+  const hasSubscription = true;
+  const subscriptionPlan: string | null = "pro";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -129,5 +72,4 @@ export default async function PricingPage() {
       <SiteFooter />
     </div>
   );
-
 }

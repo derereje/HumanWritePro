@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { currentUser } from "@clerk/nextjs/server";
+// Mock: currentUser replaced to avoid Clerk middleware requirement
 
 import PageNavbar from "~/components/PageNavbar";
 import { SiteFooter } from "~/components/SiteFooter";
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
 };
 
 export default async function ContactPage() {
-  const user = await currentUser();
-  const userEmail = user?.primaryEmailAddress?.emailAddress;
+  // Mock auth - returns a stable mock user without requiring Clerk middleware
+  const userEmail = "mock@example.com";
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
