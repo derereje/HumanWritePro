@@ -60,7 +60,7 @@ export default async function AccountPage() {
   }) : "Unknown";
 
   return (
-    <div className="min-h-screen bg-white/[0.02]">
+    <div className="min-h-screen bg-black">
       <PageNavbar currentCredits={userCredits + userExtraCredits} isTeamMember={isTeamMember} />
       <main className="mx-auto max-w-5xl px-4 py-12 pt-24 sm:px-6 lg:px-8">
         <div className="mb-8">

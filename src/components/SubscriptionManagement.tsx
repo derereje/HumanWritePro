@@ -183,7 +183,7 @@ export default function SubscriptionManagement({
               {details.isTeamMember ? (
                 <Button
                   variant="outline"
-                  className="w-full text-red-600 hover:bg-red-50 hover:text-red-700"
+                  className="w-full text-red-400 hover:bg-red-500/10 hover:text-red-300"
                   onClick={handleLeaveTeam}
                   disabled={isCanceling}
                   data-analytics-id="subscription-management-leave-team"
@@ -193,7 +193,7 @@ export default function SubscriptionManagement({
               ) : (
                 <Button
                   variant="outline"
-                  className="w-full text-red-600 hover:bg-red-50 hover:text-red-700"
+                  className="w-full text-red-400 hover:bg-red-500/10 hover:text-red-300"
                   onClick={handleCancelSubscription}
                   disabled={isCanceling || details.cancelAtPeriodEnd}
                   data-analytics-id="subscription-management-cancel-subscription"
@@ -213,7 +213,7 @@ export default function SubscriptionManagement({
               </p>
             </div>
             <Separator />
-            <div className="rounded-lg bg-gradient-to-r from-blue-50 to-blue-100 p-4">
+            <div className="rounded-lg bg-blue-600/10 border border-blue-500/20 p-4">
               <p className="text-sm font-medium text-white">Ready to upgrade?</p>
               <p className="mt-1 text-sm text-slate-400">
                 Get more credits, priority support, and API access with our premium plans.

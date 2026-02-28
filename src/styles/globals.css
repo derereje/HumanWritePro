@@ -4,34 +4,30 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #0b0e14;
-  /* Deep Charcoal Shadowy Black */
-  --foreground: #ffffff;
-  /* Bold White */
-  --card: #151b23;
-  /* Slightly lighter charcoal */
-  --card-foreground: #ffffff;
-  --popover: #151b23;
-  --popover-foreground: #ffffff;
-  --primary: #2563eb;
-  /* Professional Blue */
-  --primary-foreground: #ffffff;
-  --secondary: #374151;
-  /* Darker Gray */
-  --secondary-foreground: #f8fafc;
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
-  --accent: #1e293b;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
-  --border: #1f2937;
-  --input: #1e293b;
-  --ring: #2563eb;
-  --chart-1: #2563eb;
-  --chart-2: #3b82f6;
-  --chart-3: #60a5fa;
-  --chart-4: #93c5fd;
-  --chart-5: #bfdbfe;
+  --background: 0 0% 4%;
+  --foreground: 0 0% 100%;
+  --card: 220 15% 10%;
+  --card-foreground: 0 0% 100%;
+  --popover: 220 15% 10%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 20% 22%;
+  --secondary-foreground: 0 0% 96%;
+  --muted: 215 20% 15%;
+  --muted-foreground: 215 15% 65%;
+  --accent: 215 25% 18%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 20% 18%;
+  --input: 215 20% 18%;
+  --ring: 217 91% 60%;
+  --chart-1: 217 91% 60%;
+  --chart-2: 213 94% 68%;
+  --chart-3: 213 97% 80%;
+  --chart-4: 213 100% 87%;
+  --chart-5: 213 100% 93%;
 }
 
 @layer base {
@@ -39,9 +35,24 @@
     @apply border-border outline-ring/50;
   }
 
+  html,
   body {
-    @apply bg-background text-foreground;
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
   }
+
+  body {
+    @apply font-sans overflow-x-hidden;
+  }
+}
+
+/* Force dark mode everywhere */
+.bg-background {
+  background-color: #0a0a0a !important;
+}
+
+.text-foreground {
+  color: #ffffff !important;
 }
 
 /* Marquee animation */

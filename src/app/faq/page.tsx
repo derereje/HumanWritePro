@@ -220,7 +220,7 @@ export default function FAQPage() {
               <Link href="/contact">
                 <button
                   data-analytics-id="faq-page-contact-support"
-                  className="w-full sm:w-auto rounded-2xl bg-card px-8 py-4 font-black text-blue-900 hover:bg-blue-50 transition-all duration-300 hover:scale-105 active:scale-95"
+                  className="w-full sm:w-auto rounded-2xl bg-white/10 border border-white/20 px-8 py-4 font-black text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   Contact Support
                 </button>

@@ -39,7 +39,7 @@ interface TeamData {
 }
 
 export default function TeamPage() {
-  const { isSignedIn, isLoaded } = useUser();
+  const { isSignedIn, isLoaded, user } = useUser();
   const router = useRouter();
   const [teamData, setTeamData] = useState<TeamData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -234,7 +234,7 @@ export default function TeamPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-white/[0.02]">
+    <div className="flex min-h-screen flex-col bg-black">
       <PageNavbar />
 
       <main className="flex-1 py-12 pt-24">
@@ -247,12 +247,12 @@ export default function TeamPage() {
           </div>
 
           {!teamData?.canCreateTeam && (
-            <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-6">
+            <div className="mb-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-6">
               <div className="flex items-start gap-4">
                 <Shield className="h-6 w-6 text-amber-600" />
                 <div>
-                  <h3 className="font-semibold text-amber-900">Upgrade to Ultra Plan</h3>
-                  <p className="mt-1 text-sm text-amber-700">
+                  <h3 className="font-semibold text-amber-300">Upgrade to Ultra Plan</h3>
+                  <p className="mt-1 text-sm text-amber-400">
                     Team support is available exclusively for Ultra plan subscribers. Upgrade your plan to create and manage teams.
                   </p>
                   <Button
@@ -274,13 +274,13 @@ export default function TeamPage() {
                   <h2 className="text-xl font-semibold text-white">Your Team</h2>
                   <p className="text-sm text-slate-400">Team: {teamData.team.name}</p>
                 </div>
-                {teamData.team.ownerId !== teamData.team.members.find(m => m.email === useUser().user?.primaryEmailAddress?.emailAddress)?.id && (
+                {teamData.team.ownerId !== teamData.team.members.find(m => m.email === user?.primaryEmailAddress?.emailAddress)?.id && (
                   <Button
                     variant="outline"
                     onClick={leaveTeam}
                     disabled={actionLoading}
                     data-analytics-id="team-leave-button"
-                    className="rounded-lg border-red-200 text-red-600 hover:bg-red-50"
+                    className="rounded-lg border-red-500/30 text-red-400 hover:bg-red-500/10"
                   >
                     {actionLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Leave Team"}
                   </Button>
@@ -316,7 +316,7 @@ export default function TeamPage() {
                       onClick={() => deleteTeam(team.id)}
                       disabled={actionLoading}
                       data-analytics-id="team-delete-button"
-                      className="rounded-lg border-red-200 text-red-600 hover:bg-red-50"
+                      className="rounded-lg border-red-500/30 text-red-400 hover:bg-red-500/10"
                     >
                       <Trash2 className="h-4 w-4" />
                     </Button>
@@ -376,7 +376,7 @@ export default function TeamPage() {
                               onClick={() => removeMember(team.id, member.id)}
                               disabled={actionLoading}
                               data-analytics-id="team-remove-member-button"
-                              className="rounded-lg border-red-200 text-red-600 hover:bg-red-50"
+                              className="rounded-lg border-red-500/30 text-red-400 hover:bg-red-500/10"
                             >
                               <Trash2 className="h-4 w-4" />
                             </Button>

@@ -36,7 +36,7 @@ export default function SocialProofToasts() {
             const formattedWords = new Intl.NumberFormat().format(words);
 
             toast.custom((t) => (
-                <div className="w-auto max-w-[350px] bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/5 p-2.5 flex items-center gap-3 relative overflow-hidden group">
+                <div className="w-auto max-w-[350px] bg-[#1a1f2e] backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-white/10 p-2.5 flex items-center gap-3 relative overflow-hidden group">
                     {/* Subtle icon */}
                     <div className="flex-shrink-0 mt-0.5">
                         <div className="w-7 h-7 rounded-full bg-brand-primary-50 flex items-center justify-center">
@@ -45,7 +45,7 @@ export default function SocialProofToasts() {
                     </div>
 
                     <div className="flex-1 min-w-0 pr-2">
-                        <p className="text-[12px] text-slate-200 leading-snug whitespace-nowrap">
+                        <p className="text-[12px] text-slate-300 leading-snug whitespace-nowrap">
                             Someone just humanized <span className="font-bold">{formattedWords} words</span> using <span className={`font-bold ${plan?.color}`}>{plan?.name}</span>
                         </p>
                         <button
@@ -64,7 +64,7 @@ export default function SocialProofToasts() {
 
                     <button
                         onClick={() => toast.dismiss(t)}
-                        className="flex-shrink-0 text-gray-300 hover:text-gray-500 transition-colors"
+                        className="flex-shrink-0 text-slate-500 hover:text-slate-300 transition-colors"
                     >
                         <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

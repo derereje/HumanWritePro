@@ -8,6 +8,7 @@ const MOCK_USER = {
     username: "mockuser",
     imageUrl: "https://via.placeholder.com/150",
     emailAddresses: [{ emailAddress: "mock@example.com" }],
+    primaryEmailAddress: { emailAddress: "mock@example.com" },
     publicMetadata: {},
 };
 

@@ -39,7 +39,7 @@ export default function ResponsibleUsePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white/[0.02]">
+    <div className="min-h-screen bg-black text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -57,12 +57,12 @@ export default function ResponsibleUsePage() {
         </div>
 
         {/* Important Notice */}
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-8">
           <div className="flex gap-3">
             <AlertTriangle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-amber-800">Important Notice</h3>
-              <p className="mt-1 text-sm text-amber-700">
+              <h3 className="font-semibold text-amber-300">Important Notice</h3>
+              <p className="mt-1 text-sm text-amber-400">
                 HumanWritePro is not a tool for academic dishonesty. We encourage responsible use that enhances your work while respecting integrity policies.
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function ResponsibleUsePage() {
         </div>
 
         {/* Contact */}
-        <div className="bg-white/[0.04] rounded-xl p-6 text-center">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center">
           <p className="text-slate-400">
             Questions about responsible use?{" "}
             <Link href="mailto:kirubelman3@gmail.com" className="text-blue-600 hover:underline font-medium">
