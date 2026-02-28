@@ -35,27 +35,150 @@
     @apply border-border outline-ring/50;
   }
 
-  html,
-  body {
-    background-color: #0a0a0a !important;
-    color: #ffffff !important;
+  html {
+    background-color: #080810;
+    color: #ffffff;
+    min-height: 100%;
   }
 
   body {
     @apply font-sans overflow-x-hidden;
+    background-color: #080810;
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
   }
 }
 
+/* =============================================
+   SPACE STARFIELD BACKGROUND
+   =============================================
+
+   How it works:
+   - We use three layers of repeating radial-gradient on the html::before pseudo-element.
+   - Each layer defines a tiny radial dot (1px white, fading to transparent).
+   - Each layer has a different tile size and offset, creating the effect of
+     randomly distributed stars without any JavaScript or images.
+   - Layer 1: Dense small stars across a 250x250px tile  (most stars)
+   - Layer 2: Medium sparser stars across a 400x400px tile (mid-range stars)
+   - Layer 3: Large bright sparse stars across a 600x600px tile (occasional bright ones)
+   - Opacity is kept very low (0.35) so dots are visible but not distracting.
+   - A very slow CSS animation (twinkle) gently pulses the brightness for life.
+   - The pseudo-element is fixed and covers the full viewport, so it stays behind
+     all content and doesn't interfere with layout or text readability.
+============================================= */
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  /* Layer 1 — Dense small stars (1px, low opacity, 250x250 tile, 20 dots per tile) */
+  /* Layer 2 — Mid stars (1px, slightly brighter, 400x400 tile, 12 dots per tile)   */
+  /* Layer 3 — Sparse bright stars (1.5px, 600x600 tile, 8 dots per tile)           */
+  background-image:
+    /* ── Layer 1: dense fine stars ── */
+    radial-gradient(1px 1px at 12px 34px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 67px 18px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 130px 88px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45px 142px, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 195px 60px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 220px 200px, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 170px 30px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95px 215px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 240px 110px, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15px 190px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55px 70px, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 180px 155px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 108px 5px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 230px 245px, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75px 130px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 155px 190px, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 200px 10px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35px 245px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 120px 175px, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5px 110px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+
+    /* ── Layer 2: medium scattered stars ── */
+    radial-gradient(1px 1px at 22px 80px, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 350px 55px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 190px 310px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 290px 180px, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
+    radial-gradient(1px 1px at 100px 250px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 380px 280px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70px 370px, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 320px 120px, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 260px 350px, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 145px 25px, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 395px 395px, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50px 200px, rgba(255, 255, 255, 0.35) 0%, transparent 100%),
+
+    /* ── Layer 3: sparse bright accent stars ── */
+    radial-gradient(1.5px 1.5px at 110px 420px, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 480px 80px, rgba(255, 255, 255, 0.55) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 320px 480px, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 560px 210px, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40px 540px, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 250px 150px, rgba(255, 255, 255, 0.55) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 530px 390px, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 75px 310px, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+
+  background-size:
+    /* Layer 1 tiles (250x250px) */
+    250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px,
+    250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px,
+    250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px,
+    250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px,
+    /* Layer 2 tiles (400x400px) */
+    400px 400px, 400px 400px, 400px 400px, 400px 400px, 400px 400px,
+    400px 400px, 400px 400px, 400px 400px, 400px 400px, 400px 400px,
+    400px 400px, 400px 400px,
+    /* Layer 3 tiles (600x600px) */
+    600px 600px, 600px 600px, 600px 600px, 600px 600px, 600px 600px,
+    600px 600px, 600px 600px, 600px 600px;
+
+  animation: starfield-twinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes starfield-twinkle {
+  0% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
+}
+
+/* Ensure all page content renders ABOVE the starfield pseudo-element */
+body>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* =============================================
+   FORCE GLOBAL DARK MODE
+============================================= */
+
 /* Force dark mode everywhere */
 .bg-background {
-  background-color: #0a0a0a !important;
+  background-color: #080810 !important;
 }
 
 .text-foreground {
   color: #ffffff !important;
 }
 
-/* Marquee animation */
+/* =============================================
+   MARQUEE ANIMATION
+============================================= */
+
 .marquee {
   animation: marquee 60s linear infinite;
 }

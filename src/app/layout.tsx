@@ -143,7 +143,7 @@ export default function RootLayout({
 
   return (
     <ClerkProvider>
-      <html lang="en" className={`dark ${inter.variable}`}>
+      <html lang="en" className={`dark ${inter.variable}`} style={{ backgroundColor: '#080810' }}>
         <head>
           {/* Google tag (gtag.js) */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCMVGCJJJV"></script>
@@ -162,7 +162,7 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         </head>
-        <body suppressHydrationWarning className="overflow-x-hidden font-sans">
+        <body suppressHydrationWarning className="overflow-x-hidden font-sans" style={{ backgroundColor: '#080810', color: '#ffffff' }}>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
