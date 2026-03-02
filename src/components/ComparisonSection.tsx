@@ -54,7 +54,7 @@ const COMPETITORS = [
   },
 ];
 
-const HUMANWRITEPRO_BENEFITS = [
+const ACOUSTICTEXT_BENEFITS = [
   "Fine-tuned on 2M+ samples",
   "Consistent, predictable results",
   "Passes ALL major AI detectors",
@@ -85,17 +85,17 @@ export default function ComparisonSection({ keyword }: { keyword?: string }) {
             <AlertTriangle className="h-4 w-4 animate-pulse" />
             WARNING: MOST AI HUMANIZERS ARE SCAMS
           </div>
-          <h2 className="text-4xl sm:text-7xl font-black tracking-tighter text-white mb-8 leading-[1]">
-            Why <span className="text-blue-500">HumanWritePro</span> is the Only Choice
+          <h2 className="text-4xl sm:text-7xl font-black tracking-tighter text-foreground dark:text-white mb-8 leading-[1]">
+            Why <span className="text-blue-500 dark:text-blue-400">AcousticText</span> is the Only Choice
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
-            Most humanizers use weak models that fail Turnitin. HumanWritePro is built on high-fidelity human datasets.
+            Most humanizers use weak models that fail Turnitin. AcousticText is built on high-fidelity human datasets.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* Scam Competitors - Redesigned for Dark Theme */}
-          <div className="rounded-[3rem] border border-red-500/20 bg-red-500/[0.02] p-8 sm:p-10 flex flex-col relative overflow-hidden group">
+          <div className="rounded-[3rem] border border-red-500/20 bg-red-100 dark:bg-red-500/[0.02] p-8 sm:p-10 flex flex-col relative overflow-hidden group">
             <div className="absolute inset-0 bg-red-500/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
             <div className="flex items-center gap-4 mb-10 relative z-10">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10 border border-red-500/20">
@@ -115,7 +115,7 @@ export default function ComparisonSection({ keyword }: { keyword?: string }) {
                   className="rounded-3xl bg-black/40 border border-red-500/30 p-8 shadow-2xl animate-in slide-in-from-right-full duration-500 backdrop-blur-md"
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-black text-white tracking-tight">{currentScam?.name}</span>
+                    <span className="text-2xl font-black text-foreground dark:text-white tracking-tight">{currentScam?.name}</span>
                     <span className="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2 text-xs font-black text-red-500 border border-red-500/30 uppercase tracking-widest">
                       <X className="h-4 w-4" /> SCAM DETECTED
                     </span>
@@ -152,7 +152,7 @@ export default function ComparisonSection({ keyword }: { keyword?: string }) {
             </div>
           </div>
 
-          {/* HumanWritePro - Redesigned for Dark Theme */}
+          {/* AcousticText - Redesigned for Dark Theme */}
           <div className="rounded-[3rem] border border-blue-500/30 bg-blue-500/[0.02] p-8 sm:p-10 shadow-[0_0_50px_rgba(37,99,235,0.1)] flex flex-col relative overflow-hidden group">
             <div className="absolute inset-0 bg-blue-500/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
             <div className="flex items-center gap-4 mb-10 relative z-10">
@@ -160,7 +160,7 @@ export default function ComparisonSection({ keyword }: { keyword?: string }) {
                 <ShieldCheck className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-white tracking-tight">HumanWritePro</h3>
+                <h3 className="text-2xl font-black text-white tracking-tight">AcousticText</h3>
                 <p className="text-sm font-bold text-blue-400/80 uppercase tracking-widest leading-none">The Industry Leader</p>
               </div>
             </div>
@@ -172,8 +172,8 @@ export default function ComparisonSection({ keyword }: { keyword?: string }) {
             </div>
 
             <ul className="space-y-6 flex-1 relative z-10">
-              {HUMANWRITEPRO_BENEFITS.map((benefit, idx) => (
-                <li key={idx} className="flex items-center gap-4 text-white">
+              {ACOUSTICTEXT_BENEFITS.map((benefit, idx) => (
+                <li key={idx} className="flex items-center gap-4 text-foreground dark:text-white">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/10 border border-blue-500/20 flex-shrink-0">
                     <Check className="h-5 w-5 text-blue-500" />
                   </div>

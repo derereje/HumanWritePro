@@ -141,7 +141,7 @@ export default function ContactForm({ initialEmail, isEmailReadOnly }: ContactFo
           id="message"
           name="message"
           rows={6}
-          placeholder="Tell us what you'd like to achieve with HumanWritePro..."
+          placeholder="Tell us what you'd like to achieve with AcousticText..."
           value={formState.message}
           onChange={handleChange("message")}
           required

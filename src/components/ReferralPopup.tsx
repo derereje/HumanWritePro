@@ -12,9 +12,9 @@ interface ReferralPopupProps {
 
 export default function ReferralPopup({ isOpen, onClose }: ReferralPopupProps) {
   const [copied, setCopied] = useState(false);
-  const shareUrl = "https://humanwritepro.com";
+  const shareUrl = "https://acoustictext.com";
   const shareText =
-    "Just discovered HumanWritePro - the only AI humanizer that actually works! Passed all my detector tests. Try it free 👉";
+    "Just discovered AcousticText - the only AI humanizer that actually works! Passed all my detector tests. Try it free 👉";
 
   const handleCopy = async () => {
     try {
@@ -31,7 +31,7 @@ export default function ReferralPopup({ isOpen, onClose }: ReferralPopupProps) {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "HumanWritePro - AI Humanizer That Works",
+          title: "AcousticText - AI Humanizer That Works",
           text: shareText,
           url: shareUrl,
         });
@@ -101,7 +101,7 @@ export default function ReferralPopup({ isOpen, onClose }: ReferralPopupProps) {
                     Know someone struggling with AI detectors?
                   </p>
                   <p className="mt-1 text-sm text-slate-400">
-                    Share HumanWritePro and help them out. Unlike other
+                    Share AcousticText and help them out. Unlike other
                     "humanizers" that don't work, we're fine-tuned on 2M+ real
                     writing samples.
                   </p>

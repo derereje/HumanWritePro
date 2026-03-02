@@ -7,14 +7,14 @@ import ContactForm from "./ContactForm";
 import { Mail, MessageSquare, Building2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us - HumanWritePro",
-  description: "Have a question or feedback? Contact the HumanWritePro support team. We're here to help you with our professional AI humanizer.",
+  title: "Contact Us - AcousticText",
+  description: "Have a question or feedback? Contact the AcousticText support team. We're here to help you with our professional AI humanizer.",
   keywords: [
     "ai humanizer",
     "AI detection bypass",
     "humanize AI text",
     "humanizer",
-    "HumanWritePro contact",
+    "AcousticText contact",
     "support",
     "customer service",
     "contact us",
@@ -23,19 +23,19 @@ export const metadata: Metadata = {
     "professional AI humanizer"
   ],
   alternates: {
-    canonical: "https://www.humanwritepro.com/contact",
+    canonical: "https://www.acoustictext.com/contact",
   },
   openGraph: {
-    title: "Contact Us - HumanWritePro",
+    title: "Contact Us - AcousticText",
     description: "Get in touch with our professional support team for help or feedback.",
-    url: "https://www.humanwritepro.com/contact",
-    siteName: "HumanWritePro",
+    url: "https://www.acoustictext.com/contact",
+    siteName: "AcousticText",
     images: [
       {
         url: "/forOpengraph.png",
         width: 1200,
         height: 630,
-        alt: "HumanWritePro OpenGraph Image"
+        alt: "AcousticText OpenGraph Image"
       }
     ],
     locale: "en_US",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - HumanWritePro",
-    description: "Get in touch with the HumanWritePro support team.",
+    title: "Contact Us - AcousticText",
+    description: "Get in touch with the AcousticText support team.",
     images: ["/forOpengraph.png"],
   },
 };
@@ -61,13 +61,13 @@ export default async function ContactPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://purifytext.com"
+        "item": "https://acoustictext.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact Us",
-        "item": "https://www.purifytext.com/contact"
+        "item": "https://www.acoustictext.com/contact"
       }
     ]
   };
@@ -75,9 +75,9 @@ export default async function ContactPage() {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact HumanWritePro",
-    "description": "Contact the HumanWritePro support team for help with our professional AI humanizer.",
-    "url": "https://www.humanwritepro.com/contact"
+    "name": "Contact AcousticText",
+    "description": "Contact the AcousticText support team for help with our professional AI humanizer.",
+    "url": "https://www.acoustictext.com/contact"
   };
 
   const contactOptions = [
@@ -85,8 +85,8 @@ export default async function ContactPage() {
       icon: Mail,
       title: "Email Support",
       description: "Get help via email",
-      detail: "purifytext@gmail.com",
-      link: "mailto:purifytext@gmail.com",
+       detail: "acoustictext@gmail.com",
+       link: "mailto:acoustictext@gmail.com",
     },
     {
       icon: MessageSquare,
@@ -99,8 +99,8 @@ export default async function ContactPage() {
       icon: Building2,
       title: "Enterprise",
       description: "Custom solutions",
-      detail: "Contact for volume pricing",
-      link: "mailto:purifytext@gmail.com?subject=Enterprise%20Inquiry",
+       detail: "Contact for volume pricing",
+       link: "mailto:acoustictext@gmail.com?subject=Enterprise%20Inquiry",
     },
   ];
 

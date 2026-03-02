@@ -58,7 +58,7 @@ export default function HowToUseSection({ keyword }: { keyword?: string }) {
             EFFORTLESS WORKFLOW
           </div>
           <h2 className="text-4xl sm:text-7xl font-black tracking-tighter text-white mb-8 max-w-4xl leading-[1]">
-            How to Use <span className="text-blue-500 italic">HumanWritePro</span>{displayKeyword}
+            How to Use <span className="text-blue-500 italic">AcousticText</span>{displayKeyword}
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
             Transform AI text into human-like content in seconds. No complex settings, just superior results.

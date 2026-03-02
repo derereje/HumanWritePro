@@ -47,7 +47,7 @@ export default function FactsSection() {
             Engineered for <span className="text-brand-primary-600 italic font-serif">Professional</span> Quality
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-6">
-            HumanWritePro utilizes advanced semantic restructuring to ensure your content is not just undetectable, but genuinely readable and authoritative.
+            AcousticText utilizes advanced semantic restructuring to ensure your content is not just undetectable, but genuinely readable and authoritative.
           </p>
 
         </div>
@@ -89,7 +89,7 @@ export default function FactsSection() {
             <div className="relative z-10">
               <h3 className="text-2xl font-black mb-4 tracking-tight leading-tight">Ready to humanize your workflow?</h3>
               <p className="text-blue-100/70 leading-relaxed font-medium mb-8">
-                Join the professional elite using HumanWritePro to secure their content's future.
+                Join the professional elite using AcousticText to secure their content's future.
               </p>
             </div>
             <button

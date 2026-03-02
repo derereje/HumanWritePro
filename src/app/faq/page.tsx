@@ -4,8 +4,8 @@ import PageNavbar from "~/components/PageNavbar";
 import { SiteFooter } from "~/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "FAQ - HumanWritePro",
-  description: "Get answers about our professional AI humanizer. Learn how to bypass AI detectors and humanize your content naturally with HumanWritePro.",
+  title: "FAQ - AcousticText",
+  description: "Get answers about our professional AI humanizer. Learn how to bypass AI detectors and humanize your content naturally with AcousticText.",
   keywords: [
     "ai humanizer",
     "humanizer",
@@ -23,19 +23,19 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://www.humanwritepro.com/faq",
+    canonical: "https://www.acoustictext.com/faq",
   },
   openGraph: {
-    title: "FAQ - HumanWritePro | Professional AI Humanizer Questions",
+    title: "FAQ - AcousticText | Professional AI Humanizer Questions",
     description: "Get answers about our professional AI humanizer. Learn how to bypass AI detectors and humanize your content naturally.",
-    url: "https://www.humanwritepro.com/faq",
-    siteName: "HumanWritePro",
+    url: "https://www.acoustictext.com/faq",
+    siteName: "AcousticText",
     images: [
       {
         url: "/forOpengraph.png",
         width: 1200,
         height: 630,
-        alt: "HumanWritePro - AI Humanizer",
+        alt: "AcousticText - AI Humanizer",
       },
     ],
     locale: "en_US",
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAQ - HumanWritePro | Professional AI Humanizer Questions",
+    title: "FAQ - AcousticText | Professional AI Humanizer Questions",
     description: "Get answers about our professional AI humanizer. Learn how to bypass AI detectors and humanize your content naturally.",
     images: ["/forOpengraph.png"],
-    site: "@humanwritepro",
-    creator: "@humanwritepro",
+    site: "@acoustictext",
+    creator: "@acoustictext",
   },
 };
 
@@ -57,15 +57,15 @@ export default function FAQPage() {
       category: "Getting Started",
       questions: [
         {
-          question: "What is PurifyText?",
-          answer: "PurifyText is an AI humanizer fine-tuned on 2M+ writing samples that transforms AI-generated content into natural, undetectable writing. Our advanced model consistently bypasses AI detectors while preserving your original meaning.",
+          question: "What is AcousticText?",
+          answer: "AcousticText is an AI humanizer fine-tuned on 2M+ writing samples that transforms AI-generated content into natural, undetectable writing. Our advanced model consistently bypasses AI detectors while preserving your original meaning.",
         },
         {
-          question: "How does PurifyText work?",
+          question: "How does AcousticText work?",
           answer: "Our model, fine-tuned on over 2 million human writing samples, analyzes your text and applies intelligent transformations to break AI patterns. You can choose from different presets like 'Friendly', 'Professional', or 'Academic' to match your desired tone.",
         },
         {
-          question: "Is PurifyText free to use?",
+          question: "Is AcousticText free to use?",
           answer:
             "Yes! New users get 500 free credits to test our editor. After that, you can purchase affordable credit packages. We offer flexible pricing plans to suit different needs.",
         },
@@ -88,8 +88,8 @@ export default function FAQPage() {
       category: "AI Detection",
       questions: [
         {
-          question: "Which AI detectors does PurifyText bypass?",
-          answer: "PurifyText is verified to bypass Turnitin, GPTZero, Originality.ai, Copyleaks, ZeroGPT, QuillBot detector, Sapling, and Writer. We continuously test and update our rules.",
+          question: "Which AI detectors does AcousticText bypass?",
+          answer: "AcousticText is verified to bypass Turnitin, GPTZero, Originality.ai, Copyleaks, ZeroGPT, QuillBot detector, Sapling, and Writer. We continuously test and update our rules.",
         },
         {
           question: "Will the humanized text keep my original meaning?",
@@ -128,13 +128,13 @@ export default function FAQPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://humanwritepro.com"
+        "item": "https://acoustictext.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://www.humanwritepro.com/faq"
+        "item": "https://www.acoustictext.com/faq"
       }
     ]
   };
@@ -172,7 +172,7 @@ export default function FAQPage() {
             Frequently Asked <span className="text-blue-500">Questions</span>
           </h1>
           <p className="mt-4 text-xl text-slate-400 font-medium max-w-2xl mx-auto">
-            Everything you need to know about the HumanWritePro technology.
+            Everything you need to know about the AcousticText technology.
           </p>
         </div>
 

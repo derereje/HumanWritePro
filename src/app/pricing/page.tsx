@@ -5,8 +5,8 @@ import PricingPageClient from "~/components/PricingPageClient";
 import { SiteFooter } from "~/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Pricing - HumanWritePro",
-  description: "Choose your professional AI humanizer plan. Affordable pricing to bypass AI detectors and transform your content naturally with HumanWritePro.",
+  title: "Pricing - AcousticText",
+  description: "Choose your professional AI humanizer plan. Affordable pricing to bypass AI detectors and transform your content naturally with AcousticText.",
   keywords: [
     "ai humanizer pricing",
     "humanizer plans",
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://www.humanwritepro.com/pricing",
+    canonical: "https://www.acoustictext.com/pricing",
   },
   openGraph: {
-    title: "Pricing - HumanWritePro | Professional AI Humanizer Plans & Credits",
+    title: "Pricing - AcousticText | Professional AI Humanizer Plans & Credits",
     description: "Choose your professional AI humanizer plan. Affordable pricing to bypass AI detectors and transform content naturally.",
-    url: "https://www.humanwritepro.com/pricing",
-    siteName: "HumanWritePro",
+    url: "https://www.acoustictext.com/pricing",
+    siteName: "AcousticText",
     images: [
       {
         url: "/forOpengraph.png",
         width: 1200,
         height: 630,
-        alt: "HumanWritePro Pricing",
+        alt: "AcousticText Pricing",
       },
     ],
     locale: "en_US",
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing - HumanWritePro | Professional AI Humanizer Plans & Credits",
+    title: "Pricing - AcousticText | Professional AI Humanizer Plans & Credits",
     description: "Choose your professional AI humanizer plan. Affordable pricing to bypass AI detectors and transform content naturally.",
     images: ["/forOpengraph.png"],
-    site: "@humanwritepro",
-    creator: "@humanwritepro",
+    site: "@acoustictext",
+    creator: "@acoustictext",
   },
 };
 

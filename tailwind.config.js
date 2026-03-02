@@ -67,7 +67,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom HumanWritePro Brand Colors
+        // Custom AcousticText Brand Colors
         brand: {
           primary: {
             50: '#eff6ff',   // Blue 50
@@ -108,7 +108,7 @@ module.exports = {
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
@@ -121,15 +121,27 @@ module.exports = {
         "pulse-glow": {
           "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 5px rgba(37, 99, 235, 0.4))" },
           "50%": { opacity: "0.8", filter: "drop-shadow(0 0 15px rgba(37, 99, 235, 0.8))" },
+        },
+        "gradient-xy": {
+          "0%, 100%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+        },
+        // subtle horizontal shift for headers
+        "header-slide": {
+          "0%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-8px)" },
+          "100%": { transform: "translateX(0)" },
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee 40s linear infinite",
+        marquee: "marquee 30s linear infinite",
         "fade-in-up": "fade-in-up 0.5s ease-out forwards",
         "slide-in-bottom": "slide-in-bottom 0.5s ease-out forwards",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "gradient-xy": "gradient-xy 15s ease infinite",
+        "header-slide": "header-slide 6s ease-in-out infinite",
       },
     },
   },

@@ -2,8 +2,8 @@ import { type Metadata } from "next";
 import UnifiedHomePage from "./UnifiedHomePage";
 
 export const metadata: Metadata = {
-  title: "PurifyText: Free AI Humanizer to Bypass AI Detectors",
-  description: "PurifyText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with PurifyText.",
+  title: "AcousticText: Free AI Humanizer to Bypass AI Detectors",
+  description: "AcousticText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with AcousticText.",
   keywords: [
     "AI text humanizer",
     "humanize AI text",
@@ -16,31 +16,31 @@ export const metadata: Metadata = {
     "writing tool",
     "AI writing assistant"
   ],
-  authors: [{ name: "PurifyText" }],
-  creator: "PurifyText",
-  publisher: "PurifyText",
+  authors: [{ name: "AcousticText" }],
+  creator: "AcousticText",
+  publisher: "AcousticText",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: "https://www.purifytext.com",
+    canonical: "https://www.acoustictext.com",
   },
   openGraph: {
-    title: "PurifyText: Free AI Humanizer to Bypass AI Detectors",
-    description: "PurifyText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with PurifyText.",
-    url: "https://www.purifytext.com",
-    siteName: "PurifyText",
+    title: "AcousticText: Free AI Humanizer to Bypass AI Detectors",
+    description: "AcousticText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with AcousticText.",
+    url: "https://www.acoustictext.com",
+    siteName: "AcousticText",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PurifyText: Free AI Humanizer to Bypass AI Detectors",
-    description: "PurifyText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with PurifyText.",
-    site: "@purifytext",
-    creator: "@purifytext",
+    title: "AcousticText: Free AI Humanizer to Bypass AI Detectors",
+    description: "AcousticText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with AcousticText.",
+    site: "@acoustictext",
+    creator: "@acoustictext",
   },
   robots: {
     index: true,
@@ -67,10 +67,10 @@ export default function HomePage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Why is PurifyText different from other humanizers?",
+        "name": "Why is AcousticText different from other humanizers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most AI humanizers use simple word replacement. PurifyText uses advanced neural processing to genuinely transform text structure, tone, and flow - producing output that reads like authentic human writing."
+          "text": "Most AI humanizers use simple word replacement. AcousticText uses advanced neural processing to genuinely transform text structure, tone, and flow - producing output that reads like authentic human writing."
         }
       },
       {
@@ -86,7 +86,7 @@ export default function HomePage() {
         "name": "Which AI detectors does it bypass?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "PurifyText is verified to bypass Turnitin, GPTZero, Originality.ai, Copyleaks, ZeroGPT, QuillBot, Sapling, and Writer."
+          "text": "AcousticText is verified to bypass Turnitin, GPTZero, Originality.ai, Copyleaks, ZeroGPT, QuillBot, Sapling, and Writer."
         }
       },
       {
@@ -112,9 +112,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "PurifyText",
+            "name": "AcousticText",
             "description": "AI Text Humanizer - Transform AI-generated text into natural, human-like writing that passes detection tests.",
-            "url": "https://purifytext.com",
+            "url": "https://acoustictext.com",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "offers": {
@@ -126,7 +126,7 @@ export default function HomePage() {
             },
             "creator": {
               "@type": "Organization",
-              "name": "PurifyText"
+              "name": "AcousticText"
             },
             "aggregateRating": {
               "@type": "AggregateRating",

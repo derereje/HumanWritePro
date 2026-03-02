@@ -1,10 +1,10 @@
-# Polar Setup Guide for PurifyText
+# Polar Setup Guide for AcousticText
 
-This guide explains how to set up and configure Polar for subscription management in PurifyText.
+This guide explains how to set up and configure Polar for subscription management in AcousticText.
 
 ## Overview
 
-Polar is used to handle subscription billing and payments for PurifyText. It provides:
+Polar is used to handle subscription billing and payments for AcousticText. It provides:
 - Multiple pricing tiers (Small, Medium, Large/Ultra)
 - Monthly and yearly billing options
 - Secure payment processing
@@ -52,7 +52,7 @@ For each pricing tier (Small, Medium, Large), create two products:
 - One for yearly billing
 
 #### Small Plan (Starter) Configuration:
-- **Name:** PurifyText - Starter Plan
+- **Name:** AcousticText - Starter Plan
 - **Credits:** 500 credits/month (5,000 words)
 - **Features:**
   - Up to 1,000 words per request
@@ -66,7 +66,7 @@ For each pricing tier (Small, Medium, Large), create two products:
   - Yearly: $XX.XX/year (save XX%)
 
 #### Medium Plan (Professional) Configuration:
-- **Name:** PurifyText - Professional Plan
+- **Name:** AcousticText - Professional Plan
 - **Credits:** 2,000 credits/month (20,000 words)
 - **Features:**
   - Up to 2,000 words per request
@@ -80,7 +80,7 @@ For each pricing tier (Small, Medium, Large), create two products:
   - Yearly: $XX.XX/year (save XX%)
 
 #### Large Plan (Ultra) Configuration:
-- **Name:** PurifyText - ULTRA Plan
+- **Name:** AcousticText - ULTRA Plan
 - **Credits:** 4,500 credits/month (45,000 words)
 - **Features:**
   - Up to 3,000 words per request

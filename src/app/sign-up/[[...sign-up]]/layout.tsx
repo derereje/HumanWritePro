@@ -1,8 +1,8 @@
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign Up - PurifyText",
-  description: "Create your free account to access PurifyText's AI humanizer. Transform AI-generated text into natural, human-like writing. Start humanizing your content today.",
+  title: "Sign Up - AcousticText",
+  description: "Create your free account to access AcousticText's AI humanizer. Transform AI-generated text into natural, human-like writing. Start humanizing your content today.",
   keywords: [
     "ai humanizer",
     "humanizer",
@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     "content creation"
   ],
   openGraph: {
-    title: "Sign Up - PurifyText",
-    description: "Join PurifyText to transform AI-generated text into natural, human-like writing.",
-    url: "https://www.purifytext.com/sign-up",
-    siteName: "PurifyText",
+    title: "Sign Up - AcousticText",
+    description: "Join AcousticText to transform AI-generated text into natural, human-like writing.",
+    url: "https://www.acoustictext.com/sign-up",
+    siteName: "AcousticText",
     images: [
       {
         url: "/forOpengraph.png",
         width: 1200,
         height: 630,
-        alt: "PurifyText OpenGraph Image",
+        alt: "AcousticText OpenGraph Image",
       },
     ],
     locale: "en_US",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sign Up - PurifyText | AI Humanizer",
+    title: "Sign Up - AcousticText | AI Humanizer",
     description: "Create your account to access advanced AI text humanization.",
     images: ["/forOpengraph.png"],
   },
@@ -62,7 +62,7 @@ export default function SignUpLayout({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.purifytext.com"
+        "item": "https://www.acoustictext.com"
       },
       {
         "@type": "ListItem",

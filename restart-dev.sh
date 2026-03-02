@@ -5,7 +5,7 @@ pkill -f "next dev"
 sleep 2
 
 echo "🧹 Cleaning cache..."
-cd /home/basketo/Desktop/PurifyText
+cd /home/basketo/Desktop/AcousticText
 rm -rf .next
 
 echo "🚀 Starting dev server..."

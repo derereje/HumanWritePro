@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// SEO Verification Script for purifytext.com
+// SEO Verification Script for acoustictext.com
 // Run with: node verify-seo.js
 
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 SEO Setup Verification for purifytext.com\n');
+console.log('🔍 SEO Setup Verification for acoustictext.com\n');
 console.log('='.repeat(70) + '\n');
 
 let errors = 0;
@@ -62,7 +62,7 @@ if (fs.existsSync(sitemapPath)) {
   // Check for required pages
   const requiredPages = ['/', '/pricing', '/help-center', '/contact', '/privacy'];
   requiredPages.forEach(page => {
-    if (sitemap.includes(`https://purifytext.com${page}`)) {
+    if (sitemap.includes(`https://acoustictext.com${page}`)) {
       console.log(`  ✅ Found: ${page}`);
       passed++;
     } else {
@@ -94,7 +94,7 @@ if (fs.existsSync(robotsPath)) {
   }
   
   // Check Sitemap reference
-  if (robots.includes('Sitemap: https://www.purifytext.com/sitemap.xml')) {
+  if (robots.includes('Sitemap: https://www.acoustictext.com/sitemap.xml')) {
     console.log('  ✅ Sitemap URL present');
     passed++;
   } else {
@@ -230,16 +230,16 @@ if (errors === 0 && warnings === 0) {
 // Testing URLs (informational)
 console.log('🌐 URLs to test after deployment:\n');
 console.log('Sitemap:');
-console.log('  • https://www.purifytext.com/sitemap.xml');
-console.log('  • https://www.purifytext.com/sitemap.xml');
-console.log('  • https://www.purifytext.com/sitemap (dynamic route)\n');
+console.log('  • https://www.acoustictext.com/sitemap.xml');
+console.log('  • https://www.acoustictext.com/sitemap.xml');
+console.log('  • https://www.acoustictext.com/sitemap (dynamic route)\n');
 console.log('Robots:');
-console.log('  • https://www.purifytext.com/robots.txt');
-console.log('  • https://www.purifytext.com/robots.txt');
-console.log('  • https://www.purifytext.com/robots (dynamic route)\n');
+console.log('  • https://www.acoustictext.com/robots.txt');
+console.log('  • https://www.acoustictext.com/robots.txt');
+console.log('  • https://www.acoustictext.com/robots (dynamic route)\n');
 
 console.log('📝 Google Search Console:');
-console.log('  1. Add property: purifytext.com');
+console.log('  1. Add property: acoustictext.com');
 console.log('  2. Verify ownership');
 console.log('  3. Submit sitemap');
 console.log('  4. Request indexing\n');

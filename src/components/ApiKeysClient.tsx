@@ -131,7 +131,7 @@ export default function ApiKeysClient({ hasApiAccess }: ApiKeysClientProps) {
             API Access
           </h1>
           <p className="mt-2 text-lg text-slate-400">
-            Integrate HumanWritePro into your applications
+            Integrate AcousticText into your applications
           </p>
         </div>
 
@@ -193,7 +193,7 @@ export default function ApiKeysClient({ hasApiAccess }: ApiKeysClientProps) {
           API Keys
         </h1>
         <p className="mt-2 text-lg text-slate-400">
-          Manage your API keys for integrating HumanWritePro into your applications
+          Manage your API keys for integrating AcousticText into your applications
         </p>
       </div>
 
@@ -205,7 +205,7 @@ export default function ApiKeysClient({ hasApiAccess }: ApiKeysClientProps) {
             Create New API Key
           </CardTitle>
           <CardDescription>
-            Generate a new API key to access the HumanWritePro API
+            Generate a new API key to access the AcousticText API
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -314,14 +314,14 @@ export default function ApiKeysClient({ hasApiAccess }: ApiKeysClientProps) {
         <CardHeader>
           <CardTitle>API Documentation</CardTitle>
           <CardDescription>
-            Learn how to use the HumanWritePro API in your applications
+            Learn how to use the AcousticText API in your applications
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
             <h3 className="font-semibold text-white mb-2">Base URL</h3>
             <code className="block rounded bg-white/[0.04] px-3 py-2 text-sm">
-              https://www.humanwritepro.com/api
+              https://www.acoustictext.com/api
             </code>
           </div>
 
@@ -338,7 +338,7 @@ export default function ApiKeysClient({ hasApiAccess }: ApiKeysClientProps) {
           <div>
             <h3 className="font-semibold text-white mb-2">Example Request</h3>
             <pre className="rounded bg-white/[0.04] px-3 py-2 text-xs overflow-x-auto">
-              {`curl -X POST https://www.humanwritepro.com/api/humanizer \\
+              {`curl -X POST https://www.acoustictext.com/api/humanizer \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{

@@ -14,19 +14,19 @@ export default function ResponsibleUsePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.humanwritepro.com"
+        "item": "https://www.acoustictext.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Responsible Use",
-        "item": "https://www.humanwritepro.com/responsible-use"
+        "item": "https://www.acoustictext.com/responsible-use"
       }
     ]
   };
 
   const doItems = [
-    "Use HumanWritePro to refine and polish your own writing",
+    "Use AcousticText to refine and polish your own writing",
     "Improve sentence structure and readability",
     "Ensure your writing sounds natural and authentic",
     "Follow your institution's guidelines on AI tools",
@@ -34,7 +34,7 @@ export default function ResponsibleUsePage() {
 
   const dontItems = [
     "Submit humanized content as entirely original work without disclosure",
-    "Use HumanWritePro to circumvent academic integrity policies",
+    "Use AcousticText to circumvent academic integrity policies",
     "Violate your institution's rules on AI-assisted writing",
   ];
 
@@ -52,7 +52,7 @@ export default function ResponsibleUsePage() {
             Responsible Use Guidelines
           </h1>
           <p className="mt-3 text-lg text-slate-400">
-            Use HumanWritePro ethically and responsibly
+            Use AcousticText ethically and responsibly
           </p>
         </div>
 
@@ -63,20 +63,20 @@ export default function ResponsibleUsePage() {
             <div>
               <h3 className="font-semibold text-amber-300">Important Notice</h3>
               <p className="mt-1 text-sm text-amber-400">
-                HumanWritePro is not a tool for academic dishonesty. We encourage responsible use that enhances your work while respecting integrity policies.
+                AcousticText is not a tool for academic dishonesty. We encourage responsible use that enhances your work while respecting integrity policies.
               </p>
             </div>
           </div>
         </div>
 
-        {/* What HumanWritePro Does */}
+        {/* What AcousticText Does */}
         <div className="bg-card rounded-xl border border-white/10 p-6 mb-6">
           <div className="flex items-center gap-2 mb-4">
             <Lightbulb className="h-5 w-5 text-blue-600" />
-            <h2 className="text-lg font-semibold text-white">What HumanWritePro Does</h2>
+            <h2 className="text-lg font-semibold text-white">What AcousticText Does</h2>
           </div>
           <p className="text-slate-400 leading-relaxed">
-            HumanWritePro helps you refine how your content reads — making it more natural, clear, and engaging. Our model, fine-tuned on 2M+ writing samples, transforms text while preserving your original ideas and voice.
+            AcousticText helps you refine how your content reads — making it more natural, clear, and engaging. Our model, fine-tuned on 2M+ writing samples, transforms text while preserving your original ideas and voice.
           </p>
         </div>
 

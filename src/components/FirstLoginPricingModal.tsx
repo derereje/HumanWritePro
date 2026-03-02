@@ -117,7 +117,7 @@ export default function FirstLoginPricingModal({
 
     const content = {
         welcome: {
-            title: "Welcome to HumanWritePro!",
+            title: "Welcome to AcousticText!",
             desc: (
                 <>
                     Start free with 500 words. Upgrade anytime for more.<br />

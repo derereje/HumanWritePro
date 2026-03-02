@@ -5,8 +5,8 @@ import { SiteFooter } from "~/components/SiteFooter";
 import ApiKeysClient from "~/components/ApiKeysClient";
 
 export const metadata: Metadata = {
-  title: "API Keys - HumanWritePro | AI Humanizer API",
-  description: "Manage your API keys for HumanWritePro integration. ULTRA plan users get API access to integrate AI humanizer into their systems.",
+  title: "API Keys - AcousticText | AI Humanizer API",
+  description: "Manage your API keys for AcousticText integration. ULTRA plan users get API access to integrate AI humanizer into their systems.",
   keywords: [
     "ai humanizer api",
     "humanizer api key",

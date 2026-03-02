@@ -13,10 +13,10 @@
       "has": [
         {
           "type": "host",
-          "value": "purifytext.com"
+          "value": "acoustictext.com"
         }
       ],
-      "destination": "https://www.purifytext.com/:path*",
+      "destination": "https://www.acoustictext.com/:path*",
       "permanent": true
     }
   ],

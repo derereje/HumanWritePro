@@ -173,7 +173,7 @@ export async function POST(request: Request) {
 // GET - API documentation
 export async function GET() {
   return NextResponse.json({
-    message: "PurifyText Humanizer API",
+    message: "AcousticText Humanizer API",
     version: "1.0.0",
     documentation: {
       endpoint: "/api/humanize",

@@ -1,14 +1,14 @@
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - HumanWritePro",
-  description: "Read the official Privacy Policy for HumanWritePro. Understand how we collect, use, and protect your personal information and data.",
+  title: "Privacy Policy - AcousticText",
+  description: "Read the official Privacy Policy for AcousticText. Understand how we collect, use, and protect your personal information and data.",
   keywords: [
     "ai humanizer",
     "AI detection bypass",
     "humanize AI text",
     "humanizer",
-    "HumanWritePro privacy",
+    "AcousticText privacy",
     "privacy policy",
     "data protection",
     "user data",
@@ -16,19 +16,19 @@ export const metadata: Metadata = {
     "free AI humanizer"
   ],
   alternates: {
-    canonical: "https://www.humanwritepro.com/privacy",
+    canonical: "https://www.acoustictext.com/privacy",
   },
   openGraph: {
-    title: "Privacy Policy - HumanWritePro | AI Humanizer",
-    description: "Learn how HumanWritePro protects your privacy and handles your data.",
-    url: "https://www.humanwritepro.com/privacy",
-    siteName: "HumanWritePro",
+    title: "Privacy Policy - AcousticText | AI Humanizer",
+    description: "Learn how AcousticText protects your privacy and handles your data.",
+    url: "https://www.acoustictext.com/privacy",
+    siteName: "AcousticText",
     images: [
       {
         url: "/forOpengraph.png",
         width: 1200,
         height: 630,
-        alt: "HumanWritePro OpenGraph Image"
+        alt: "AcousticText OpenGraph Image"
       }
     ],
     locale: "en_US",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy - HumanWritePro",
-    description: "Read the privacy policy for HumanWritePro.",
+    title: "Privacy Policy - AcousticText",
+    description: "Read the privacy policy for AcousticText.",
     images: ["/forOpengraph.png"],
   },
 };

@@ -1,4 +1,4 @@
-# robots.txt for www.purifytext.com
+# robots.txt for www.acoustictext.com
 # Allow all web crawlers to access all content except sensitive areas
 
 User-agent: *
@@ -25,4 +25,4 @@ Disallow: /_next/
 Disallow: /static/
 
 # Sitemap location (canonical domain with www)
-Sitemap: https://www.purifytext.com/sitemap.xml
+Sitemap: https://www.acoustictext.com/sitemap.xml

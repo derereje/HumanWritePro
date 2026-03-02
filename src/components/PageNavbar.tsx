@@ -2,7 +2,8 @@
 
 import { SignInButton, SignUpButton, UserButton, useUser } from "~/lib/mockClerk";
 import { Button } from "./ui/button";
-import { History, Menu, X, Sparkles } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
+import { History, Menu, X, Sparkles, Brain } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -54,28 +55,15 @@ export default function PageNavbar({
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 px-4">
-      <nav className="mx-auto max-w-4xl bg-black/40 backdrop-blur-md border border-white/10 rounded-full shadow-2xl shadow-black/20">
+      <nav className="mx-auto max-w-4xl backdrop-blur-md shadow-2xl rounded-full transition-all bg-white/50 dark:bg-black/40 border border-gray-300/30 dark:border-white/10">
         <div className="flex h-14 items-center justify-between px-4 sm:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group transition-all" data-analytics-id="page-navbar-logo">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 shadow-xl shadow-black/50 shadow-blue-600/40 group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_10px_rgba(37,99,235,0.6)]">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6 text-white animate-pulse-glow"
-              >
-                <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.125A4 4 0 0 0 11.5 22a4 4 0 0 0 7.497-2.98 4 4 0 0 0 .52-8.125 4 4 0 0 0-2.526-5.77A3 3 0 1 0 12 5Z" />
-                <path d="M9 13a4.5 4.5 0 0 0 3 4" />
-                <path d="M15 13a4.5 4.5 0 0 1-3 4" />
-                <path d="M12 5v4" />
-              </svg>
+              <Brain className="h-6 w-6 text-white animate-pulse-glow" />
             </div>
-            <span className="text-xl font-black tracking-tight text-white bg-gradient-to-r from-blue-100 to-white bg-clip-text text-transparent group-hover:from-white group-hover:to-blue-100 transition-all duration-300">
-              HumanWrite<span className="text-blue-500 group-hover:text-blue-400">Pro</span>
+            <span className="text-xl font-black tracking-tight text-foreground bg-gradient-to-r from-blue-100 to-white bg-clip-text text-transparent group-hover:from-white group-hover:to-blue-100 transition-all duration-300">
+              AcousticText
             </span>
           </Link>
 
@@ -88,8 +76,8 @@ export default function PageNavbar({
                 className={cn(
                   "px-3 py-1.5 text-sm font-bold rounded-full transition-all hover:scale-105",
                   isActive(item.href)
-                    ? "bg-white/10 text-white shadow-inner"
-                    : "text-slate-300 hover:text-white"
+                    ? "bg-brand-primary-100 text-brand-primary-600 shadow-inner"
+                    : "text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white"
                 )}
                 data-analytics-id={`page-navbar-link-${item.label.toLowerCase()}`}
               >
@@ -100,6 +88,7 @@ export default function PageNavbar({
 
           {/* Desktop Right Section */}
           <div className="hidden lg:flex lg:items-center lg:gap-2">
+            <ThemeToggle />
             {isSignedIn ? (
               <>
                 {isTeamMember && (

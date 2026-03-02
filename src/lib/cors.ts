@@ -4,14 +4,14 @@ export function addCorsHeaders(response: NextResponse, request: NextRequest) {
   const origin = request.headers.get('origin');
   const allowedOrigins = [
     'http://localhost:3050',
-    'https://www.purifytext.com',
-    'https://purifytext.com'
+    'https://www.acoustictext.com',
+    'https://acoustictext.com'
   ];
 
   if (origin && (allowedOrigins.includes(origin) || origin.startsWith('chrome-extension://'))) {
     response.headers.set('Access-Control-Allow-Origin', origin);
   } else {
-    response.headers.set('Access-Control-Allow-Origin', 'https://www.purifytext.com');
+    response.headers.set('Access-Control-Allow-Origin', 'https://www.acoustictext.com');
   }
 
   response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

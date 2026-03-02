@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SignInButton, SignUpButton, UserButton, useUser } from "~/lib/mockClerk";
 import { Button } from "./ui/button";
+import ThemeToggle from "./ThemeToggle";
 import { History, Menu, X, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,30 +44,22 @@ export default function ModernNavbar({
 
   return (
     <div className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2 sm:px-4">
-      <nav className={`mx-auto max-w-7xl bg-black/40 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20 transition-all ${mobileMenuOpen ? "rounded-2xl" : "rounded-full"}`}>
+      <nav className={cn(
+        "mx-auto max-w-7xl backdrop-blur-md shadow-2xl transition-all",
+        mobileMenuOpen ? "rounded-2xl" : "rounded-full",
+        "bg-white/50 dark:bg-black/40",
+        "border border-gray-300/30 dark:border-white/10"
+      )}>
         <div className="flex h-12 sm:h-14 items-center justify-between px-3 sm:px-6">
           {/* Logo */}
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group transition-all" data-analytics-id="nav-logo">
             <div className="flex items-center justify-center ml-2 group-hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)] transition-all">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-7 w-7 text-blue-500 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow"
-              >
-                <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.125A4 4 0 0 0 11.5 22a4 4 0 0 0 7.497-2.98 4 4 0 0 0 .52-8.125 4 4 0 0 0-2.526-5.77A3 3 0 1 0 12 5Z" />
-                <path d="M9 13a4.5 4.5 0 0 0 3 4" />
-                <path d="M15 13a4.5 4.5 0 0 1-3 4" />
-                <path d="M12 5v4" />
-              </svg>
+              <Brain className="h-7 w-7 text-blue-500 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black text-white tracking-tight leading-none bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-blue-500 transition-all duration-300">
-                HumanWritePro
+                AcousticText
               </span>
               <span className="hidden xs:inline-block text-[8px] sm:text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-0.5 opacity-80">
                 Professional AI Humanizer
@@ -95,6 +88,7 @@ export default function ModernNavbar({
 
           {/* Desktop Right Section */}
           <div className="hidden lg:flex lg:items-center lg:gap-2">
+            <ThemeToggle />
             {isSignedIn ? (
               <>
                 {isTeamMember && (
@@ -112,7 +106,7 @@ export default function ModernNavbar({
                     size="sm"
                     onClick={onHistoryClick}
                     data-analytics-id="nav-history"
-                    className="gap-1.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-full h-8 px-4 transition-all"
+                    className="gap-1.5 text-slate-600 dark:text-slate-200 hover:text-slate-800 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-white/5 rounded-full h-8 px-4 transition-all"
                   >
                     <History className="h-4 w-4" />
                     History
@@ -132,7 +126,7 @@ export default function ModernNavbar({
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-400 hover:text-white rounded-full"
+                    className="text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white rounded-full"
                   >
                     Sign In
                   </Button>
@@ -140,7 +134,7 @@ export default function ModernNavbar({
                 <SignUpButton mode="modal">
                   <Button
                     size="sm"
-                    className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-4"
+                    className="bg-brand-primary-500 text-white hover:bg-brand-primary-600 rounded-full px-4"
                   >
                     Get Started
                   </Button>
@@ -167,7 +161,10 @@ export default function ModernNavbar({
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-white/10 bg-black/90 backdrop-blur-xl rounded-b-2xl lg:hidden max-h-[80vh] overflow-y-auto">
+          <div className="border-t border-gray-300/30 dark:border-white/10 bg-white/90 dark:bg-black/90 backdrop-blur-xl rounded-b-2xl lg:hidden max-h-[80vh] overflow-y-auto">
+            <div className="px-4 py-2 flex justify-end">
+              <ThemeToggle />
+            </div>
             <div className="px-4 py-3 space-y-1">
               {allNavLinks.map((item) => (
                 <Link

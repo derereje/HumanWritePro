@@ -10,6 +10,7 @@ import { EventReplayProvider } from "~/components/EventReplayContext";
 import EventHighlighter from "~/components/EventHighlighter";
 import SocialProofToasts from "~/components/SocialProofToasts";
 import { SHOW_SOCIAL_PROOF } from "~/config";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.humanwritepro.com'),
-  title: "HumanWritePro: Advanced AI Humanizer to Bypass AI Detectors",
-  description: "HumanWritePro transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with HumanWritePro.",
+  metadataBase: new URL('https://www.acoustictext.com'),
+  title: "AcousticText: Advanced AI Humanizer to Bypass AI Detectors",
+  description: "AcousticText transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly with AcousticText.",
   keywords: [
     "ai humanizer",
     "humanize AI text",
@@ -32,13 +33,13 @@ export const metadata: Metadata = {
     "undetectable AI content",
     "AI writing humanizer"
   ],
-  authors: [{ name: "HumanWritePro" }],
-  creator: "HumanWritePro",
-  publisher: "HumanWritePro",
+  authors: [{ name: "AcousticText" }],
+  creator: "AcousticText",
+  publisher: "AcousticText",
   alternates: {
-    canonical: "https://www.humanwritepro.com",
+    canonical: "https://www.acoustictext.com",
     languages: {
-      'en-US': 'https://www.humanwritepro.com',
+      'en-US': 'https://www.acoustictext.com',
     },
   },
   robots: {
@@ -56,26 +57,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.humanwritepro.com",
-    siteName: "HumanWritePro",
-    title: "HumanWritePro: Advanced AI Humanizer to Bypass AI Detectors",
+    url: "https://www.acoustictext.com",
+    siteName: "AcousticText",
+    title: "AcousticText: Advanced AI Humanizer to Bypass AI Detectors",
     description: "Advanced AI humanizer transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly.",
     images: [
       {
         url: "/forOpenGraph.png",
         width: 1200,
         height: 630,
-        alt: "HumanWritePro - AI Text Humanizer"
+        alt: "AcousticText - AI Text Humanizer"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "HumanWritePro: Advanced AI Humanizer to Bypass AI Detectors",
+    title: "AcousticText: Advanced AI Humanizer to Bypass AI Detectors",
     description: "Advanced AI humanizer transforms your content into natural, undetectable writing. Bypass AI detectors effortlessly.",
     images: ["/forOpenGraph.png"],
-    site: "@humanwritepro",
-    creator: "@humanwritepro",
+    site: "@acoustictext",
+    creator: "@acoustictext",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -88,19 +89,19 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "HumanWritePro",
-    "url": "https://www.humanwritepro.com",
+    "name": "AcousticText",
+    "url": "https://www.acoustictext.com",
     "description": "Transform AI-generated text into natural, human-like writing with our advanced AI humanizer.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.humanwritepro.com/?q={search_term_string}"
+        "urlTemplate": "https://www.acoustictext.com/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     },
     "sameAs": [
-      "https://x.com/humanwritepro",
+      "https://x.com/acoustictext",
       "https://www.linkedin.com/company/humanwrite-pro"
     ]
   };
@@ -108,13 +109,13 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "HumanWritePro",
-    "url": "https://www.humanwritepro.com",
-    "logo": "https://www.humanwritepro.com/HumanWritePro.png",
+    "name": "AcousticText",
+    "url": "https://www.acoustictext.com",
+    "logo": "https://www.acoustictext.com/AcousticText.png",
     "description": "Professional AI humanizer for transforming AI-generated content into natural, human-like writing.",
     "email": "kirubelman3@gmail.com",
     "sameAs": [
-      "https://x.com/humanwritepro",
+      "https://x.com/acoustictext",
       "https://www.linkedin.com/company/humanwrite-pro"
     ]
   };
@@ -122,7 +123,7 @@ export default function RootLayout({
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "HumanWritePro AI Humanizer",
+    "name": "AcousticText AI Humanizer",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
     "offers": {
@@ -138,12 +139,12 @@ export default function RootLayout({
       "worstRating": "1"
     },
     "featureList": "AI Detection Bypass, Humanize Text, Grammar Correction, SEO Optimization",
-    "screenshot": "https://www.humanwritepro.com/opengraph-image.png"
+    "screenshot": "https://www.acoustictext.com/opengraph-image.png"
   };
 
   return (
     <ClerkProvider>
-      <html lang="en" className={`dark ${inter.variable}`} style={{ backgroundColor: '#080810' }}>
+      <html lang="en" className={`${inter.variable}`}> 
         <head>
           {/* Google tag (gtag.js) */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCMVGCJJJV"></script>
@@ -157,16 +158,17 @@ export default function RootLayout({
               `,
             }}
           />
-          <title>HumanWritePro: Advanced AI Humanizer to Bypass AI Detectors</title>
-          <link rel="canonical" href="https://www.humanwritepro.com" />
+          <title>AcousticText: Advanced AI Humanizer to Bypass AI Detectors</title>
+          <link rel="canonical" href="https://www.acoustictext.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         </head>
-        <body suppressHydrationWarning className="overflow-x-hidden font-sans" style={{ backgroundColor: '#080810', color: '#ffffff' }}>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-          />
+        <body suppressHydrationWarning className="overflow-x-hidden font-sans bg-background text-foreground">
+          <ThemeProvider attribute="class" defaultTheme="light">
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -184,6 +186,7 @@ export default function RootLayout({
               {SHOW_SOCIAL_PROOF && <SocialProofToasts />}
             </EventReplayProvider>
           </AnalyticsProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

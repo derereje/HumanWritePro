@@ -13,13 +13,13 @@ export default function PrivacyPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.humanwritepro.com"
+                "item": "https://www.acoustictext.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Privacy Policy",
-                "item": "https://www.humanwritepro.com/privacy"
+                "item": "https://www.acoustictext.com/privacy"
             }
         ]
     };
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
                     <div className="space-y-12">
                         <div className="text-base text-slate-400 leading-relaxed mb-6">
                             <p>
-                                Welcome to HumanWritePro. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
+                                Welcome to AcousticText. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
                             </p>
                         </div>
 

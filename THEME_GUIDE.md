@@ -1,4 +1,4 @@
-# PurifyText Color Theme Guide
+# AcousticText Color Theme Guide
 
 ## Color Palette
 

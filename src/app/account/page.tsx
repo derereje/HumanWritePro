@@ -8,8 +8,8 @@ import { CreditCard, Mail, User, Calendar, Key, Users, Settings } from "lucide-r
 import SubscriptionManagement from "~/components/SubscriptionManagement";
 
 export const metadata: Metadata = {
-  title: "Account - HumanWritePro | Manage Your AI Humanizer",
-  description: "Manage your HumanWritePro account and credits. Access your professional AI humanizer and track your usage for bypassing AI detectors.",
+  title: "Account - AcousticText | Manage Your AI Humanizer",
+  description: "Manage your AcousticText account and credits. Access your professional AI humanizer and track your usage for bypassing AI detectors.",
   keywords: [
     "ai humanizer",
     "humanizer",
@@ -68,7 +68,7 @@ export default async function AccountPage() {
             Manage Your Account Settings
           </h1>
           <p className="mt-2 text-lg text-slate-400">
-            Manage your HumanWritePro account and view your usage
+            Manage your AcousticText account and view your usage
           </p>
         </div>
 

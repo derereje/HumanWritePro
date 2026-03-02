@@ -12,13 +12,13 @@ export default function TermsPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.humanwritepro.com"
+                "item": "https://www.acoustictext.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Terms of Service",
-                "item": "https://www.humanwritepro.com/terms"
+                "item": "https://www.acoustictext.com/terms"
             }
         ]
     };
@@ -40,7 +40,7 @@ export default function TermsPage() {
                         Terms of Service
                     </h1>
                     <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                        Please read these terms carefully before using HumanWritePro. By using our service, you agree to these terms.
+                        Please read these terms carefully before using AcousticText. By using our service, you agree to these terms.
                     </p>
                     <div className="mt-4 text-xs sm:text-sm text-slate-400 bg-white/[0.03] rounded-full px-4 py-2 w-fit mx-auto border border-white/[0.1]">
                         Last updated: November 4, 2025
@@ -52,7 +52,7 @@ export default function TermsPage() {
                     <div className="space-y-8">
                         <div className="text-base text-slate-400 leading-relaxed mb-6">
                             <p>
-                                These Terms of Service govern your use of HumanWritePro and provide information about the HumanWritePro Service. By using our services, you agree to these terms.
+                                These Terms of Service govern your use of AcousticText and provide information about the AcousticText Service. By using our services, you agree to these terms.
                             </p>
                         </div>
 
@@ -61,7 +61,7 @@ export default function TermsPage() {
                                 1. Acceptance of Terms
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                By accessing and using HumanWritePro, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these Terms of Service, please do not use our service.
+                                By accessing and using AcousticText, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these Terms of Service, please do not use our service.
                             </p>
                         </section>
 
@@ -70,7 +70,7 @@ export default function TermsPage() {
                                 2. Description of Service
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                HumanWritePro provides an AI-powered text humanization service that transforms AI-generated content into natural, human-like writing. Our service includes:
+                                AcousticText provides an AI-powered text humanization service that transforms AI-generated content into natural, human-like writing. Our service includes:
                             </p>
                             <ul className="space-y-2 ml-4 list-disc list-outside text-base text-slate-400">
                                 <li>Text humanization with multiple style presets</li>
@@ -101,7 +101,7 @@ export default function TermsPage() {
                                 4. Acceptable Use
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                You agree not to use HumanWritePro to:
+                                You agree not to use AcousticText to:
                             </p>
                             <ul className="space-y-2 ml-4 list-disc list-outside text-base text-slate-400">
                                 <li>Violate any laws or regulations</li>
@@ -118,7 +118,7 @@ export default function TermsPage() {
                                 5. Payment and Subscriptions
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                HumanWritePro offers both free and paid plans:
+                                AcousticText offers both free and paid plans:
                             </p>
                             <ul className="space-y-2 ml-4 list-disc list-outside text-base text-slate-400">
                                 <li><strong className="text-white">Free Plan:</strong> Limited credits provided at signup</li>
@@ -134,7 +134,7 @@ export default function TermsPage() {
                                 6. Intellectual Property
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                The service and its original content, features, and functionality are owned by HumanWritePro and are protected by international copyright, trademark, and other intellectual property laws.
+                                The service and its original content, features, and functionality are owned by AcousticText and are protected by international copyright, trademark, and other intellectual property laws.
                             </p>
                             <p className="text-base text-slate-400 leading-relaxed">
                                 Content you create using our service remains yours, but you grant us a license to process and humanize your text to provide the service.
@@ -176,7 +176,7 @@ export default function TermsPage() {
                                 9. Limitation of Liability
                             </h2>
                             <p className="text-base text-slate-400 leading-relaxed">
-                                To the maximum extent permitted by law, HumanWritePro shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.
+                                To the maximum extent permitted by law, AcousticText shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.
                             </p>
                         </section>
 
